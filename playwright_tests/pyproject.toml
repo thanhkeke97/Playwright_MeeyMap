@@ -1,0 +1,17 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=long",
+    "-vv",
+    "-s",
+    "--strict-markers",
+]
+markers = [
+    "MAP: Tất cả test liên quan đến bản đồ quy hoạch",
+    "QHSDD: Quy hoạch sử dụng đất",
+    "login: Test yêu cầu đăng nhập",
+]

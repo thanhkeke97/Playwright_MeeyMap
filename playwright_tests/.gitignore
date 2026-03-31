@@ -1,0 +1,46 @@
+# Python bytecode / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pytest / coverage / test caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+
+# Playwright / test artifacts
+results/
+playwright-report/
+test-results/
+
+# Local secrets and environment files
+.env
+.env.*
+config/ui.yaml
+config/ui.local.yaml
+config/ui.secret.yaml
+config/ui.secrets.yaml
+
+# OS / IDE noise
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.idea/
+
+# Keep .vscode if you want shared debug config like launch.json
+# .vscode/

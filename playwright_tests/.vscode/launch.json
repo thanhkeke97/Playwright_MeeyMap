@@ -1,0 +1,64 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Pytest: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "${file}",
+        "-vv",
+        "-s",
+        "--headed",
+        "--maxfail=1",
+        "--tb=long"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "subProcess": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    {
+      "name": "Pytest: Specific Test NodeID",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "tests/ui/quy_hoach_su_dung_dat/test_tra_cuu_qhsdd_login.py::TestQHSDD_TRA_CUU_LOGIN_002::test_click_dia_chi_co_du_lieu",
+        "-vv",
+        "-s",
+        "--headed",
+        "--maxfail=1",
+        "--tb=long"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "subProcess": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ],
+  "inputs": [
+    {
+      "id": "pytestTarget",
+      "type": "promptString",
+      "description": "Enter pytest nodeid or path to run",
+      "default": "tests/ui/quy_hoach_su_dung_dat/test_tra_cuu_qhsdd_login.py::TestQHSDD_TRA_CUU_LOGIN_002::test_click_dia_chi_co_du_lieu"
+    }
+  ]
+}
